@@ -9,12 +9,15 @@ In my initial journey, the idea was "simple": to find ways to "bypass" Python's 
 The program operates as a pseudo-random number generator that incorporates data from various external sources to add greater unpredictability. In an attempt to enhance unpredictability, I gathered information from sensors such as a Light Dependent Resistor (LDR), a microphone, and an electric noise receiver. These readings, combined with factors such as system time and process ID, form the basis of the generation process. I included electrical, luminous, and microphone noise, process ID, and the current timestamp using a Mersenne twister reconstruction (Credits in the code).
 
 <h2>My beautiful sensors</h2>
-![script](https://github.com/Gutierre0x80/HPRNG/img/Hardware.jpeg)
+<img src="https://github.com/Gutierre0x80/HPRNG/raw/main/img/Hardware.jpeg" width="345">
+
 [Yes, I used a ball of aluminum foil as an electric noise receiver.]
 
 <h2>Output</h2>
-![script](https://github.com/Gutierre0x80/HPRNG/img/out.jpeg)
+<img src="https://github.com/Gutierre0x80/HPRNG/raw/main/img/out.jpg" width="345">
+
 
 This project may have some errors; if you'd like to help me improve, feel free to reach out to me on Discord.
+
 My discord: gutierre0x80
 _______________________________________________________________________________________________________________
