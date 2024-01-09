@@ -1,12 +1,14 @@
 # HPRNG Hardware-Entropic Pseudorandom Number Generator
 
 <h2>Why?</h2>
-In my initial journey, the idea was "simple": to find ways to "bypass" Python's time library to avoid generating random numbers based on system time. In other words, I aimed to prevent the use of randomness sources provided by the operating system, opting instead for the system time, which is easier to manipulate on a PC. Following this, I began analyzing os.urandom(). However, as I delved into the intricacies of computational randomness, I stumbled upon something called "HRNG" (Hardware Random Number Generator). When I realized it was already daytime, I was finishing assembling a ball of aluminum foil to capture electrical noise.
+In my initial journey, the idea was "simple": to find ways to "force" Python's time library not to use the randomness sources provided by the operating system (I wanted the random_seed_urandom() function to fail). Thus, the library would use the random_seed_time_pid() function, which utilizes the current time and the PID. In other words, I sought to avoid using randomness sources provided by the operating system, as if the library used the system time, it would be easier to manipulate. With this, I could finally make all pseudorandom numbers "coincidentally" be the same without setting a seed. After that, I began to analyze os.urandom(). However, as I delved into the complexities of computational randomness, I came across something called "HRNG" (Hardware Random Number Generator). When I realized it was already daytime, I was finishing assembling a ball of aluminum foil to capture electrical noise.
 
 
 <h2>Operation</h2>
 
-The program operates as a pseudo-random number generator that incorporates data from various external sources to add greater unpredictability. In an attempt to enhance unpredictability, I gathered information from sensors such as a Light Dependent Resistor (LDR), a microphone, and an electric noise receiver. These readings, combined with factors such as system time and process ID, form the basis of the generation process. I included electrical, luminous, and microphone noise, process ID, and the current timestamp using a Mersenne twister reconstruction (Credits in the code).
+
+The program operates as a pseudo-random number generator that incorporates data from some external sources to try to increase unpredictability. I collected information from sensors such as a Light Dependent Resistor (LDR), a microphone, and an electric noise receiver. These readings, combined with factors like system time and process ID, form the foundation of the generation process. I included electrical, luminous, and microphone noises, the process ID, and the current date/time stamp using a reconstruction of the Mersenne twister (Credits in the code).
+
 
 <h2>My beautiful sensors</h2>
 <img src="https://github.com/Gutierre0x80/HPRNG/raw/main/img/Hardware.jpeg" width="345">
