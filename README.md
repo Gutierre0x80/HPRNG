@@ -21,5 +21,7 @@ The program operates as a pseudo-random number generator that incorporates data 
 
 This project may have some errors; if you'd like to help me improve, feel free to reach out to me on Discord.
 
+Edit: I wasn't able to finish this project. For various reasons, perhaps I didn't find it sufficiently relevant. But if you want to use my project for something useful, I would suggest collecting multiple samples of noise and using XOR to mix the bits, or something similar, it doesn't matter. I would also consider implementing Avalanche Noise using a Zener diode and some sources of jitter, like crystal oscillators.
+
 My discord: gutierre0x80
 _______________________________________________________________________________________________________________
